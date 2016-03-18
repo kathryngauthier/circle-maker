@@ -1,6 +1,11 @@
-var $ball = $('.ball');
+$('html').on('keydown', function (e) {
+  var newTop = Math.random() * 1000;
+  var newLeft = Math.random() * 1000;
+  var $ball = $('<div>');
+  var $body = $('body');
 
-$('ball').on('keydown',function(e) {
-	var newTop = $ball + Math.random();
-	console.log(e.keyCode);
+  $ball.addClass('ball');
+  $body.append($ball);
+  $ball.css('top', newTop);
+  $ball.css('left', newLeft);
 });
